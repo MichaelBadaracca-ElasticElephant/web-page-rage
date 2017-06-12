@@ -4,6 +4,7 @@ var mainAppVm = new Vue( {
     el: '#app',
     data: {
         test: "Web Page Rage!!!",
+        pageToDisplay: "http://eloquentjavascript.net/",
         //reversedString: "",
         stringToReverse:"Is this what you meant bro?"
     },

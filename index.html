@@ -10,12 +10,16 @@
 </head>
 <body>
     <div id="app">
+        <input v-model="pageToDisplay" type="text" placeholder="Enter url of page to destroy" />
+        {{pageToDisplay}}
+        <!-- Helpful resource for embedding pages http://www.web-source.net/embedding_web_pages.htm#.WT6zbWjyuUk -->
+        
+        <!-- TODO Add autocomplete for typing in webpage/ website-->
+        <!-- TODO Add url validation to not regenerate frame until valid url is input -->
 
-        <!--<object data=http://www.web-source.net width="600" height="400">--> 
-            <embed src=http://www.web-source.net width="600" height="400" />
-            <!--Error: Embedded data could not be displayed. 
-        </object>-->
-        {{test}}
+        <!-- To make embed dynamic, the key of the element has to change, triggering the DOM to reload it as an unique element
+         the following page was helpful: https://forum.vuejs.org/t/problem-with-dynamic-component-and-video-tag/4315 -->
+        <embed v-bind:src="pageToDisplay" v-bind:key="pageToDisplay" width="600" height="400" />
     </div>
     <script src="/main.js"></script>
 </body>
