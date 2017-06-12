@@ -1,0 +1,23 @@
+#gamePage {
+    width: 80%;
+    height: 80vh;
+    display: block;
+    margin: 0 auto;
+    border: 2px green solid;
+}
+
+#gamePage:hover {
+    cursor: crosshair;
+    border: 2px red solid;
+}
+
+#gamePage h1 {
+    border: 2px red pink;
+}
+
+/*
+    
+    
+    
+*/
+
